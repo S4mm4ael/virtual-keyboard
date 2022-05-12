@@ -46,6 +46,7 @@ function initFunctionality() {
   const backspaceKey = document.querySelector('.backspace_key');
   const textInput = document.querySelector('.text');
   const delKey = document.querySelector('.del_key');
+  const enterKey = document.querySelector('.enter_key');
 
   for (let i = 0; i < keys.length; i += 1) {
     keys[i].setAttribute('keyname', keys[i].innerText.toUpperCase());
@@ -73,6 +74,9 @@ function initFunctionality() {
     }
     if (e.key === 'Delete') {
       delKey.classList.add('active');
+    }
+    if (e.key === 'Enter') {
+      enterKey.classList.add('active');
     }
     if (e.code === 'AltLeft') {
       altKey.classList.add('active');
@@ -147,47 +151,65 @@ function initFunctionality() {
           changeCase();
         }
         shiftRight.classList.remove('active');
-        shiftRight.classList.remove('remove');
+        shiftRight.classList.add('remove');
       }
       if (e.code === 'ShiftLeft') {
         if (shiftLeft.classList.contains('active')) {
           changeCase();
         }
         shiftLeft.classList.remove('active');
-        shiftLeft.classList.remove('remove');
+        shiftLeft.classList.add('remove');
       }
-
+      if (e.key === 'Enter') {
+        enterKey.classList.remove('active');
+        enterKey.classList.add('remove');
+      }
       if (e.code === 'Tab') {
         tabKey.classList.remove('active');
+        tabKey.classList.add('remove');
       }
       if (e.key === 'Delete') {
         delKey.classList.remove('active');
+        delKey.classList.add('remove');
       }
       if (e.code === 'ArrowLeft') {
         arrowLeft.classList.remove('active');
+        arrowLeft.classList.add('remove');
       }
 
       if (e.code === 'ArrowRight') {
         arrowRight.classList.remove('active');
+        arrowRight.classList.add('remove');
       }
 
-      if (e.code === 'ArrowUp') { arrowUp.classList.remove('active'); }
+      if (e.code === 'ArrowUp') { 
+        arrowUp.classList.remove('active'); 
+        arrowUp.classList.add('remove'); 
+      }
 
-      if (e.code === 'ArrowDown') { arrowDown.classList.remove('active'); }
+      if (e.code === 'ArrowDown') { 
+        arrowDown.classList.remove('active');
+        arrowDown.classList.add('remove'); 
+      } 
       if (e.code === 'MetaLeft') {
-        winKey.classList.remove('active');
+        winKey.classList.remove('active')
+        winKey.classList.add('remove'); ;
       }
       if (e.code === 'ControlLeft') {
         ctrlLeft.classList.remove('active');
+        ctrlLeft.classList.add('remove'); 
       }
       if (e.code === 'ControlRight') {
         ctrlRight.classList.remove('active');
+        ctrlRight.classList.add('remove'); 
       }
       if (e.code === 'AltLeft') {
         altKey.classList.remove('active');
+        altKey.classList.add('remove'); 
       }
       if (e.code === 'Backspace') {
         backspaceKey.classList.remove('active');
+        backspaceKey.classList.add('remove'); 
       }
 
       setTimeout(() => {
@@ -273,12 +295,14 @@ function initFunctionality() {
     }, 200);
   });
   shiftLeft.addEventListener('click', (e) => {
+    textInput.focus();
     e.target.classList.add('remove');
     setTimeout(() => {
       e.target.classList.remove('remove');
     }, 200);
   });
   shiftRight.addEventListener('click', (e) => {
+    textInput.focus();
     e.target.classList.add('remove');
     setTimeout(() => {
       e.target.classList.remove('remove');
@@ -289,12 +313,14 @@ function initFunctionality() {
     e.target.classList.toggle('active');
   });
   ctrlKey.forEach((buttonItem) => buttonItem.addEventListener('click', (e) => {
+    textInput.focus();
     e.target.classList.add('remove');
     setTimeout(() => {
       e.target.classList.remove('remove');
     }, 200);
   }));
   winKey.addEventListener('click', (e) => {
+    textInput.focus();
     e.target.classList.add('remove');
     setTimeout(() => {
       e.target.classList.remove('remove');
@@ -302,6 +328,7 @@ function initFunctionality() {
   });
 
   altKey.addEventListener('click', (e) => {
+    textInput.focus();
     e.target.classList.add('remove');
     setTimeout(() => {
       e.target.classList.remove('remove');

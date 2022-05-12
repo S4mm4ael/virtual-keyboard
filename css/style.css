@@ -59,9 +59,22 @@ body {
     transition: .2s;
     z-index: 5;
     cursor: pointer;
-    border:#585858 1px solid ;
+    
 }
-
+.keys:hover {
+    transition: .4s;
+    background-color:#ffc400;
+}
+.keys:active  {
+    border-radius: 60px;
+    transition: .4s;
+    background-color:#ffc400;
+}
+.active{
+    border-radius: 60px;
+    transition: .4s;
+    background-color:#ffc400;
+}
 .backspace_key {
     width: 120px;
 }
@@ -103,10 +116,7 @@ body {
     transition: .2s;
 }
 
-.keys.active {
-    background-color: #333;
-    color: #fff;
-}
+
 
 .keys.remove {
     animation: keys_animation 0.5s forwards ;
@@ -127,31 +137,8 @@ body.active {
     background-color: rgb(54,54,54);
 }
 
-
-
-.toggle_circle {
-    width: 20px;
-    height: 20px;
-    background-color: rgb(54,54,54);
-    border-radius: 50px;
-    margin: 0 5px;
-    position: absolute;
-    left: 0;
-    transition: .2s;
-}
-
-.toggle_circle.active {
-    left: 60%;
-    background-color: #fff;
-}
-
 .keyboard_wrapp.active {
     background-color: #585858;
-}
-
-.keys.keys_night {
-    background-color: #3c3c3c;
-    color: #fff;
 }
 
 .text.active {
