@@ -78,7 +78,7 @@ const keyboardEngLow = `<div class="container">
         <p> * cоздано в Шindows, смена языка L.Shift + L.Alt</p>
     </div>
 </div>`;
-const textBox = `<div class="container_textarea"><textarea class="text" type="text" style="resize: none;" autofocus></textarea>
+const textBox = `<div class="container_textarea" ><textarea inputmode="none" class="text" type="text" style="resize: none;" autofocus></textarea>
 </div>`;
 const vocabulary = [
   'Ё',

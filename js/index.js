@@ -182,34 +182,34 @@ function initFunctionality() {
         arrowRight.classList.add('remove');
       }
 
-      if (e.code === 'ArrowUp') { 
-        arrowUp.classList.remove('active'); 
-        arrowUp.classList.add('remove'); 
+      if (e.code === 'ArrowUp') {
+        arrowUp.classList.remove('active');
+        arrowUp.classList.add('remove');
       }
 
-      if (e.code === 'ArrowDown') { 
+      if (e.code === 'ArrowDown') {
         arrowDown.classList.remove('active');
-        arrowDown.classList.add('remove'); 
-      } 
+        arrowDown.classList.add('remove');
+      }
       if (e.code === 'MetaLeft') {
-        winKey.classList.remove('active')
-        winKey.classList.add('remove'); ;
+        winKey.classList.remove('active');
+        winKey.classList.add('remove');
       }
       if (e.code === 'ControlLeft') {
         ctrlLeft.classList.remove('active');
-        ctrlLeft.classList.add('remove'); 
+        ctrlLeft.classList.add('remove');
       }
       if (e.code === 'ControlRight') {
         ctrlRight.classList.remove('active');
-        ctrlRight.classList.add('remove'); 
+        ctrlRight.classList.add('remove');
       }
       if (e.code === 'AltLeft') {
         altKey.classList.remove('active');
-        altKey.classList.add('remove'); 
+        altKey.classList.add('remove');
       }
       if (e.code === 'Backspace') {
         backspaceKey.classList.remove('active');
-        backspaceKey.classList.add('remove'); 
+        backspaceKey.classList.add('remove');
       }
 
       setTimeout(() => {
@@ -341,10 +341,6 @@ function initFunctionality() {
     setTimeout(() => {
       e.target.classList.remove('remove');
     }, 200);
-  });
-  // Mobile keyboard hiding
-  textInput.focus(() => {
-    document.activeElement.blur();
   });
 }
 window.addEventListener('DOMContentLoaded', createHTMLStructureInput());
