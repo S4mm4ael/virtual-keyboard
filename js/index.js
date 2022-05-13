@@ -342,6 +342,10 @@ function initFunctionality() {
       e.target.classList.remove('remove');
     }, 200);
   });
+  // Mobile keyboard hiding
+  textInput.focus(() => {
+    document.activeElement.blur();
+  });
 }
 window.addEventListener('DOMContentLoaded', createHTMLStructureInput());
 window.addEventListener('DOMContentLoaded', init());
